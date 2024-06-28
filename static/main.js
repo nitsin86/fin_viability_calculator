@@ -4,7 +4,9 @@ globalVariables = {
     globalsettings: 'globalsettings'
 };
 
-errormsg = 'errormsg';document.getElementById('submit').addEventListener('click', function (e) {
+errormsg = 'errormsg';
+
+document.getElementById('submit').addEventListener('click', function (e) {
     initiatizeStrings();
     e.preventDefault();
     for (key in globalVariables) {
@@ -39,6 +41,9 @@ errormsg = 'errormsg';document.getElementById('submit').addEventListener('click'
         .then(data => document.getElementById('result').innerText = `Your assets will last ${numberWithCommas(data.years)} years    `);
 
     //Getting variables to call fetch function
+    if (document.getElementById('houseinvestments').style.display == 'none')
+        return;
+
     houseBudget = document.getElementById('houseBudget').value;
     houseAppreciation = document.getElementById('houseAppreciation').value;
     purchaseYear = document.getElementById('purchaseYear').value;
@@ -100,3 +105,13 @@ function numberWithCommas(x) {
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 }
+
+document.getElementById('willPurchase').addEventListener('click', function (e) {
+    const conditionalSection = document.getElementById('houseinvestments');
+    conditionalSection.style.display = 'block';
+});
+
+document.getElementById('wontPurchase').addEventListener('click', function (e) {
+    const conditionalSection = document.getElementById('houseinvestments');
+    conditionalSection.style.display = 'none';
+});

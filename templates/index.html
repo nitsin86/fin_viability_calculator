@@ -17,17 +17,8 @@
 
     <form id="assetsandinflows">
         <div class="section-headers">Assets & Inflows</div>
-        <label for="isMetro">Do you stay in a Metro city?</label>
-        <div class="radio-options">
-            <div>
-                <label for="isMetroYes">Yes</label>
-                <input type="radio" id="isMetroYes" name="isMetro" value="yes" checked="checked">
-            </div>
-            <div>
-                <label for="isMetroNo" style="display: inline;">No</label>
-                <input type="radio" id="isMetroNo" name="isMetro" value="no">
-            </div>
-        </div>
+
+
         <div class="form-section">
             <label id="savingsLabel" for="savings"></label>
             <input type="float" id="savings" name="savings" value="52050000" required>
@@ -39,14 +30,6 @@
         <div class="form-section">
             <label id="monthlyInflowLabel" for="monthlyInflow"></label>
             <input type="float" id="monthlyInflow" name="monthlyInflow" value="390000" required>
-        </div>
-        <div class="form-section">
-            <label for="hra">- HRA:</label>
-            <input type="float" id="hra" name="hra" value="100000" required>
-        </div>
-        <div class="form-section">
-            <label for="basic">- Basic:</label>
-            <input type="float" id="basic" name="basic" value="180000" required>
         </div>
         <div class="form-section">
             <label for="salaryGrowth">Annual Growth Rate of Income (%):</label>
@@ -127,23 +110,56 @@
         </div>
     </form>
 
-    <form id="houseinvestments">
+    <form id="house">
         <div class="section-headers">House Purchase</div>
-        <div class="form-section">
-            <label id="houseBudgetLabel" for="houseBudget"></label>
-            <input type="float" id="houseBudget" name="houseBudget" value="20000000">
+        <label for="housepurchase">Do you plan to purchase a house someday?</label>
+        <div class="radio-options">
+            <div>
+                <label for="willPurchase">Yes</label>
+                <input type="radio" id="willPurchase" name="housepurchase" value="yes" checked="checked">
+            </div>
+            <div>
+                <label for="wontPurchase" style="display: inline;">No</label>
+                <input type="radio" id="wontPurchase" name="housepurchase" value="no">
+            </div>
         </div>
-        <div class="form-section">
-            <label for="purchaseYear">Planned Purchase Year:</label>
-            <input type="float" id="purchaseYear" name="purchaseYear" value="2025">
-        </div>
-        <div class="form-section">
-            <label for="houseAppreciation">Expected Annual Value Appreciation (%):</label>
-            <input type="float" id="houseAppreciation" name="houseAppreciation" value="5">
-        </div>
-        <div class="form-section">
-            <label for="stayPeriod">Expected Period of Stay (years):</label>
-            <input type="float" id="stayPeriod" name="stayPeriod" value="30">
+        <br>
+        <div id="houseinvestments">
+            <div class="form-section">
+                <label id="houseBudgetLabel" for="houseBudget"></label>
+                <input type="float" id="houseBudget" name="houseBudget" value="20000000">
+            </div>
+            <div class="form-section">
+                <label for="purchaseYear">Planned Purchase Year:</label>
+                <input type="float" id="purchaseYear" name="purchaseYear" value="2025">
+            </div>
+            <div class="form-section">
+                <label for="houseAppreciation">Expected Annual Value Appreciation (%):</label>
+                <input type="float" id="houseAppreciation" name="houseAppreciation" value="5">
+            </div>
+            <div class="form-section">
+                <label for="stayPeriod">Expected Period of Stay (years):</label>
+                <input type="float" id="stayPeriod" name="stayPeriod" value="30">
+            </div>
+            <div class="form-section">
+                <label for="hra">- HRA:</label>
+                <input type="float" id="hra" name="hra" value="100000" required>
+            </div>
+            <div class="form-section">
+                <label for="basic">Basic Income:</label>
+                <input type="float" id="basic" name="basic" value="180000" required>
+            </div>
+            <label for="isMetro">Do you stay in a Metro city?</label>
+            <div class="radio-options">
+                <div>
+                    <label for="isMetroYes">Yes</label>
+                    <input type="radio" id="isMetroYes" name="isMetro" value="yes" checked="checked">
+                </div>
+                <div>
+                    <label for="isMetroNo" style="display: inline;">No</label>
+                    <input type="radio" id="isMetroNo" name="isMetro" value="no">
+                </div>
+            </div><br>
         </div>
     </form>
 
