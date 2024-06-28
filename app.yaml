@@ -2,10 +2,6 @@ runtime: python312  # Specify the Python runtime version
 entrypoint: gunicorn -b :$PORT app:app  # Replace 'app' with the name of your main Python file without the '.py' extension
 
 handlers:
-  - url: /robots.txt
-    static_files: robots.txt
-    upload: robots.txt
-
   - url: /ads.txt
     static_files: ads.txt
     upload: ads.txt
