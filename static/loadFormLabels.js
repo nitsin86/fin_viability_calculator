@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 async function loadConstants() {
-    response = await fetch('/static/stringLabels.json');
+    response = await fetch('/static/stringlabels.json');
     constants = await response.json();
 
     document.querySelector('#homepage_title').innerText = constants.homepage;
