@@ -6,5 +6,9 @@ handlers:
     static_files: ads.txt
     upload: ads.txt
 
+  - url: /robots.txt
+    static_files: robots.txt
+    upload: robots.txt
+
   - url: /.*
     script: auto
