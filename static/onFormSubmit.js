@@ -79,7 +79,6 @@ document.getElementById('submit').addEventListener('click', function (e) {
 
     allData['timeSeriesData'] = timeSeriesData;
     allData['otherData'] = otherData;
-    console.log(timeSeriesData);
 
     fetch('/calc_years', {
         method: 'POST',
